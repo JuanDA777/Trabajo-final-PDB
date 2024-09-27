@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Consultas: Carros</h1>
+        <ul>
+            <li><a href="index.html">Carros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="hoteles.html">Hoteles</a></li>
+            <li><a href="materias.html">Materias universidad</a></li>
+            <li><a href="platos.html">Platos de restaurante</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://www.mycompiler.io/view/Irq3YkusRvs" target="_blank">
+            <button>Mira aquí la base de datos</button>
+        </a><br>
+        
+        <section id="consulta1">
+            <h2>Consulta 1</h2>
+            <pre><code>db.los carros.find({ color: { $eq: "Negro" } });</code></pre>
+            <p>Descripción: Todos los carros de color negro.</p>
+            <img src="Imagenes/consulta1.png" alt="Consulta 1">
+        </section>
+
+        <section id="consulta2">
+            <h2>Consulta 2</h2>
+            <pre><code>db.los carros.find({ año: { $gt: 2020 } });</code></pre>
+            <p>Descripción: Consulta todos los carros donde el año es mayor a 2020.</p>
+            <img src="Imagenes/consulta2.png" alt="Consulta 2">
+        </section>
+
+        <section id="consulta3">
+            <h2>Consulta 3</h2>
+            <pre><code>db.los carros.find({ precio: { $gte: 150000000 } });</code></pre>
+            <p>Descripción: Filtra los carros con un precio mayor o igual a 150,000,000.</p>
+            <img src="Imagenes/consulta3.png" alt="Consulta 3">
+        </section>
+
+        <section id="consulta4">
+            <h2>Consulta 4</h2>
+            <pre><code>db.los carros.find({ capacidad_pasajeros: { $lt: 4 } });</code></pre>
+            <p>Descripción: Encuentra los carros que tienen una capacidad de pasajeros menor a 4.</p>
+            <img src="Imagenes/consulta4.png" alt="Consulta 4">
+        </section>
+
+        <section id="consulta5">
+            <h2>Consulta 5</h2>
+            <pre><code>db.los carros.find({ potencia_motor: { $lte: "2.5L" } });</code></pre>
+            <p>Descripción: Consulta que muestra los carros con una potencia de motor menor o igual a 2.5L.</p>
+            <img src="Imagenes/consulta5.png" alt="Consulta 5">
+        </section>
+
+        <section id="consulta6">
+            <h2>Consulta 6</h2>
+            <pre><code>db.los carros.find({ marca: { $ne: "Toyota" } });</code></pre>
+            <p>Descripción: Filtra los carros que no son de la marca Toyota.</p>
+            <img src="Imagenes/consulta6.png" alt="Consulta 6">
+        </section>
+
+        <section id="consulta7">
+            <h2>Consulta 7</h2>
+            <pre><code>db.los carros.find({ marca: { $in: ["Toyota", "Audi", "Honda"] } });</code></pre>
+            <p>Descripción: Encuentra los carros de las marcas Toyota, Audi u Honda.</p>
+            <img src="Imagenes/consulta7.png" alt="Consulta 7">
+        </section>
+
+        <section id="consulta8">
+            <h2>Consulta 8</h2>
+            <pre><code>db.los carros.find({ marca: { $nin: ["Toyota", "Ford"] } });</code></pre>
+            <p>Descripción: Muestra los carros que no son de las marcas Toyota ni Ford.</p>
+            <img src="Imagenes/consulta8.png" alt="Consulta 8">
+        </section>
+
+        <section id="consulta9">
+            <h2>Consulta 9</h2>
+            <pre><code>db.los carros.find({});</code></pre>
+            <p>Descripción: Esta consulta devuelve todos los documentos de la colección los carros.</p>
+            <p style="color: red; font-size: 12px;"> Por limitaciones del compilador solo muestran los 20 primeros datos</p>
+            <img src="Imagenes/consulta9.png" alt="Consulta 9">
+        </section>
+
+        <section id="consulta10">
+            <h2>Consulta 10</h2>
+            <pre><code>db.los carros.deleteOne({ _id: 1 });</code></pre>
+            <p>Descripción: Elimina un coche específico cuyo ID es 1.</p>
+            <img src="Imagenes/consulta10.png" alt="Consulta 10">
+        </section>
+
+    </main>
+</body>
+
+</html>

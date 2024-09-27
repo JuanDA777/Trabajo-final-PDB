@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias de universidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Consultas: Materias de universidad</h1>
+        <ul>
+            <li><a href="index.html">Carros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="hoteles.html">Hoteles</a></li>
+            <li><a href="materias.html">Materias universidad</a></li>
+            <li><a href="platos.html">Platos de restaurante</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://www.mycompiler.io/view/JdEwIL3Praj" target="_blank">
+            <button>Mira aquí la base de datos</button>
+        </a><br>
+        
+        <section id="consulta1">
+            <h2>Consulta 1</h2>
+            <pre><code>db.materias.find({"Materia": {$eq: "Cloud Computing II"}})</code></pre>
+            <p>Descripción: Busca materias cuyo nombre sea exactamente "Cloud Computing II".</p>
+            <img src="Imagenes/consulta31.png" alt="Consulta 1">
+        </section>
+        
+        <section id="consulta2">
+            <h2>Consulta 2</h2>
+            <pre><code>db.materias.find({"Creditos": {$gt: 2}})</code></pre>
+            <p>Descripción: Encuentra materias con más de 2 créditos.</p>
+            <img src="Imagenes/consulta32.png" alt="Consulta 2">
+        </section>
+        
+        <section id="consulta3">
+            <h2>Consulta 3</h2>
+            <pre><code>db.materias.find({"Horas_clase_teoricas": {$gte: 2}})</code></pre>
+            <p>Descripción: Busca materias con al menos 2 horas de clase teóricas.</p>
+            <img src="Imagenes/consulta33.png" alt="Consulta 3">
+        </section>
+        
+        <section id="consulta4">
+            <h2>Consulta 4</h2>
+            <pre><code>db.materias.find({"Hora_clase_practica": {$lt: 3}})</code></pre>
+            <p>Descripción: Encuentra materias con menos de 3 horas de clase práctica.</p>
+            <img src="Imagenes/consulta34.png" alt="Consulta 4">
+        </section>
+        
+        <section id="consulta5">
+            <h2>Consulta 5</h2>
+            <pre><code>db.materias.find({"Codigo": {$lte: 84035}})</code></pre>
+            <p>Descripción: Busca materias con código menor o igual a 84035.</p>
+            <img src="Imagenes/consulta35.png" alt="Consulta 5">
+        </section>
+        
+        <section id="consulta6">
+            <h2>Consulta 6</h2>
+            <pre><code>db.materias.find({"Profesor": {$ne: "Alejandra Zuleta Medina"}})</code></pre>
+            <p>Descripción: Encuentra materias que no sean impartidas por "Alejandra Zuleta Medina".</p>
+            <img src="Imagenes/consulta36.png" alt="Consulta 6">
+        </section>
+        
+        <section id="consulta7">
+            <h2>Consulta 7</h2>
+            <pre><code>db.materias.find({"Aula": {$in: ["601 MI", "603 MI"]}})</code></pre>
+            <p>Descripción: Busca materias que se imparten en las aulas "601 MI" o "603 MI".</p>
+            <img src="Imagenes/consulta37.png" alt="Consulta 7">
+        </section>
+        
+        <section id="consulta8">
+            <h2>Consulta 8</h2>
+            <pre><code>db.materias.find({"Aula": {$nin: ["601 MI", "Lab"]}})</code></pre>
+            <p>Descripción: Encuentra materias que no se imparten en las aulas "601 MI" o "Lab".</p>
+            <img src="Imagenes/consulta38.png" alt="Consulta 8">
+        </section>
+        
+        <section id="consulta9">
+            <h2>Consulta 9</h2>
+            <pre><code>db.materias.find({"Creditos": {$gte: 2}})</code></pre>
+            <p>Descripción: Busca materias con más de 2 créditos.</p>
+            <img src="Imagenes/consulta39.png" alt="Consulta 9">
+        </section>
+        
+        <section id="consulta10">
+            <h2>Consulta 10</h2>
+            <pre><code>db.materias.remove({"_id": 31})</code></pre>
+            <p>Descripción: Elimina la materia con el _id de 31.</p>
+            <img src="Imagenes/consulta40.png" alt="Consulta 10">
+        </section>
+        
+
+    </main>
+</body>
+
+</html>

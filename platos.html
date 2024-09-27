@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platos de comida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Consultas: Platos de comida</h1>
+        <ul>
+            <li><a href="index.html">Carros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="hoteles.html">Hoteles</a></li>
+            <li><a href="materias.html">Materias universidad</a></li>
+            <li><a href="platos.html">Platos de restaurante</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://www.mycompiler.io/view/7tVgvPTSfEO" target="_blank">
+            <button>Mira aquí la base de datos</button>
+        </a><br>
+        
+        <section id="consulta1">
+            <h2>Consulta 1</h2>
+            <pre><code>db.menu.find({ nombre: { $eq: 'Tarta de Manzana' } });</code></pre>
+            <p>Descripción: Busca el plato llamado "Tarta de Manzana" en el menú.</p>
+            <img src="Imagenes/consulta41.png" alt="Consulta 1">
+        </section>
+        
+        <section id="consulta2">
+            <h2>Consulta 2</h2>
+            <pre><code>db.menu.find({ categoria: { $gt: 'Entradas' } });</code></pre>
+            <p>Descripción: Encuentra platos en categorías que vienen después de "Entradas".</p>
+            <img src="Imagenes/consulta42.png" alt="Consulta 2">
+        </section>
+        
+        <section id="consulta3">
+            <h2>Consulta 3</h2>
+            <pre><code>db.menu.find({ tiempo_preparacion: { $gte: 25 } });</code></pre>
+            <p>Descripción: Busca platos que requieren 25 minutos o más para prepararse.</p>
+            <img src="Imagenes/consulta43.png" alt="Consulta 3">
+        </section>
+        
+        <section id="consulta4">
+            <h2>Consulta 4</h2>
+            <pre><code>db.menu.find({ disponibilidad: { $lt: 15 } });</code></pre>
+            <p>Descripción: Encuentra platos que tienen menos de 15 unidades disponibles.</p>
+            <img src="Imagenes/consulta44.png" alt="Consulta 4">
+        </section>
+        
+        <section id="consulta5">
+            <h2>Consulta 5</h2>
+            <pre><code>db.menu.find({ popularidad: { $lte: 80 } });</code></pre>
+            <p>Descripción: Busca platos con un nivel de popularidad de 80 o menos.</p>
+            <img src="Imagenes/consulta45.png" alt="Consulta 5">
+        </section>
+        
+        <section id="consulta6">
+            <h2>Consulta 6</h2>
+            <pre><code>db.menu.find({ nivel_picante: { $ne: 'Suave' } });</code></pre>
+            <p>Descripción: Encuentra platos que no sean "Suaves" en nivel de picante.</p>
+            <img src="Imagenes/consulta46.png" alt="Consulta 6">
+        </section>
+        
+        <section id="consulta7">
+            <h2>Consulta 7</h2>
+            <pre><code>db.menu.find({ calorias: { $in: [200, 300, 400] } });</code></pre>
+            <p>Descripción: Busca platos que tengan 200, 300 o 400 calorías.</p>
+            <img src="Imagenes/consulta47.png" alt="Consulta 7">
+        </section>
+        
+        <section id="consulta8">
+            <h2>Consulta 8</h2>
+            <pre><code>db.menu.find({ calorias: { $nin: [350, 700] } });</code></pre>
+            <p>Descripción: Encuentra platos que no tengan 350 o 700 calorías.</p>
+            <img src="Imagenes/consulta48.png" alt="Consulta 8">
+        </section>
+        
+        <section id="consulta9">
+            <h2>Consulta 9</h2>
+            <pre><code>db.menu.find({ precio: { $gt: 20000 }, disponibilidad: { $gt: 10 } });</code></pre>
+            <p>Descripción: Busca platos que cuesten más de 20,000 y tengan más de 10 unidades disponibles.</p>
+            <img src="Imagenes/consulta49.png" alt="Consulta 9">
+        </section>
+        
+        <section id="consulta10">
+            <h2>Consulta 10</h2>
+            <pre><code>db.menu.updateOne({ nombre: 'Hamburguesa Clásica' }, { $set: { precio: 22000 } });</code></pre>
+            <p>Descripción: Actualiza el precio de la "Hamburguesa Clásica" a 22,000.</p>
+            <img src="Imagenes/consulta50.png" alt="Consulta 10">
+        </section>         
+
+    </main>
+</body>
+
+</html>

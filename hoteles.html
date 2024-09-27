@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Consultas: Hoteles</h1>
+        <ul>
+            <li><a href="index.html">Carros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="hoteles.html">Hoteles</a></li>
+            <li><a href="materias.html">Materias universidad</a></li>
+            <li><a href="platos.html">Platos de restaurante</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://www.mycompiler.io/view/DN9HPFziepx" target="_blank">
+            <button>Mira aquí la base de datos</button>
+        </a><br>
+        
+        <section id="consulta1">
+            <h2>Consulta 1</h2>
+            <pre><code>db.hoteles.find({ "nombre": { "$eq": "Pestana CR7 Gran Vía" } });</code></pre>
+            <p>Descripción: Encuentra el hotel famoso hotel de Cristiano Ronaldo llamado "Pestana CR7 Gran Vía".</p>
+            <img src="Imagenes/consulta21.png" alt="Consulta 1">
+        </section>
+        
+        <section id="consulta2">
+            <h2>Consulta 2</h2>
+            <pre><code>db.hoteles.find({ "calificacion": { "$gt": 4 } });</code></pre>
+            <p>Descripción: Consulta hoteles con una calificación mayor a 4.</p>
+            <img src="Imagenes/consulta22.png" alt="Consulta 2">
+        </section>
+        
+        <section id="consulta3">
+            <h2>Consulta 3</h2>
+            <pre><code>db.hoteles.find({ "tarifa": { "$gte": 1000 } });</code></pre>
+            <p>Descripción: Muestra hoteles con tarifas mayores o iguales a 1000.</p>
+            <img src="Imagenes/consulta23.png" alt="Consulta 3">
+        </section>
+        
+        <section id="consulta4">
+            <h2>Consulta 4</h2>
+            <pre><code>db.hoteles.find({ "area_m2": { "$lt": 15000 } });</code></pre>
+            <p>Descripción: Encuentra hoteles con un área menor a 15000 m².</p>
+            <img src="Imagenes/consulta24.png" alt="Consulta 4">
+        </section>
+        
+        <section id="consulta5">
+            <h2>Consulta 5</h2>
+            <pre><code>db.hoteles.find({ "capacidad_maxima_por_habitacion": { "$lte": 2 } });</code></pre>
+            <p>Descripción: Filtra hoteles con una capacidad máxima de 2 personas por habitación.</p>
+            <img src="Imagenes/consulta25.png" alt="Consulta 5">
+        </section>
+        
+        <section id="consulta6">
+            <h2>Consulta 6</h2>
+            <pre><code>db.hoteles.find({ "ubicacion": { "$ne": "Estados Unidos" } });</code></pre>
+            <p>Descripción: Muestra hoteles que no están ubicados en Estados Unidos.</p>
+            <img src="Imagenes/consulta26.png" alt="Consulta 6">
+        </section>
+        
+        <section id="consulta7">
+            <h2>Consulta 7</h2>
+            <pre><code>db.hoteles.find({ "ingresos_mensuales": { "$in": [20000000, 25000000, 30000000] } });</code></pre>
+            <p>Descripción: Encuentra hoteles con ingresos mensuales de 20, 25 o 30 millones.</p>
+            <img src="Imagenes/consulta27.png" alt="Consulta 7">
+        </section>
+        
+        <section id="consulta8">
+            <h2>Consulta 8</h2>
+            <pre><code>db.hoteles.find({ "ingresos_mensuales": { "$nin": [25000000, 30000000, 35000000] } });</code></pre>
+            <p>Descripción: Filtra hoteles cuyos ingresos mensuales no son 25, 30 ni 35 millones.</p>
+            <img src="Imagenes/consulta28.png" alt="Consulta 8">
+        </section>
+        
+        <section id="consulta9">
+            <h2>Consulta 9</h2>
+            <pre><code>db.hoteles.find();</code></pre>
+            <p>Descripción: Esta consulta devuelve todos los documentos de la colección hoteles.</p>
+            <img src="Imagenes/consulta29.png" alt="Consulta 9">
+        </section>
+        
+        <section id="consulta10">
+            <h2>Consulta 10</h2>
+            <pre><code>db.hoteles.deleteOne({ "nombre": "Burj Al Arab" });</code></pre>
+            <p>Descripción: Elimina el hotel llamado "Burj Al Arab".</p>
+            <img src="Imagenes/consulta30.png" alt="Consulta 10">
+        </section>        
+
+    </main>
+</body>
+
+</html>

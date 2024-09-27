@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de supermercado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Consultas: Productos de supermercado</h1>
+        <ul>
+            <li><a href="index.html">Carros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="hoteles.html">Hoteles</a></li>
+            <li><a href="materias.html">Materias universidad</a></li>
+            <li><a href="platos.html">Platos de restaurante</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <a href="https://www.mycompiler.io/view/6XtErs7W70o" target="_blank">
+            <button>Mira aquí la base de datos</button>
+        </a><br>
+        
+        <section id="consulta1">
+            <h2>Consulta 1</h2>
+            <pre><code>db.productos.find({ nombre: { $eq: 'Nivea Sun' } });</code></pre>
+            <p>Descripción: Busca productos cuyo nombre sea exactamente "Nivea Sun".</p>
+            <img src="Imagenes/consulta11.png" alt="Consulta 1">
+        </section>
+        
+        <section id="consulta2">
+            <h2>Consulta 2</h2>
+            <pre><code>db.productos.find({ precio: { $gt: 1000000 } });</code></pre>
+            <p>Descripción: Encuentra productos cuyo precio es mayor a 1,000,000.</p>
+            <img src="Imagenes/consulta12.png" alt="Consulta 2">
+        </section>
+        
+        <section id="consulta3">
+            <h2>Consulta 3</h2>
+            <pre><code>db.productos.find({ disponibilidad: { $gte: 50 } });</code></pre>
+            <p>Descripción: Busca productos que tengan al menos 50 unidades disponibles.</p>
+            <img src="Imagenes/consulta13.png" alt="Consulta 3">
+        </section>
+        
+        <section id="consulta4">
+            <h2>Consulta 4</h2>
+            <pre><code>db.productos.find({ modelo: { $lt: 'V14-G2-ALC' } });</code></pre>
+            <p>Descripción: Encuentra productos con modelos que alfabéticamente son menores que "V14-G2-ALC".</p>
+            <p style="color: blue; font-size: 12px;">Asumiendo hipoteticamente que los productos esten  ordenados alfabéticamente.</p>
+            <img src="Imagenes/consulta14.png" alt="Consulta 4">
+        </section>
+        
+        <section id="consulta5">
+            <h2>Consulta 5</h2>
+            <pre><code>db.productos.find({ peso: { $lte: '1kg' } });</code></pre>
+            <p>Descripción: Busca productos que pesen 1 kg o menos.</p>
+            <img src="Imagenes/consulta15.png" alt="Consulta 5">
+        </section>
+        
+        <section id="consulta6">
+            <h2>Consulta 6</h2>
+            <pre><code>db.productos.find({ unidades_vendidas: { $ne: 1000 } });</code></pre>
+            <p>Descripción: Encuentra productos que no han vendido exactamente 1000 unidades.</p>
+            <img src="Imagenes/consulta16.png" alt="Consulta 6">
+        </section>
+        
+        <section id="consulta7">
+            <h2>Consulta 7</h2>
+            <pre><code>db.productos.find({ valoracion_promedio: { $in: [4.8, 5.0] } });</code></pre>
+            <p>Descripción: Busca productos con una valoración promedio de 4.8 o 5.0.</p>
+            <img src="Imagenes/consulta17.png" alt="Consulta 7">
+        </section>
+        
+        <section id="consulta8">
+            <h2>Consulta 8</h2>
+            <pre><code>db.productos.find({ precio: { $nin: [300000, 500000] } });</code></pre>
+            <p>Descripción: Encuentra productos cuyo precio no se encuentre entre 300,000 y 500,000.</p>
+            <img src="Imagenes/consulta18.png" alt="Consulta 8">
+        </section>
+        
+        <section id="consulta9">
+            <h2>Consulta 9</h2>
+            <pre><code>db.productos.find({ categoria: 'Electrónica' });</code></pre>
+            <p>Descripción: Busca todos los productos que pertenecen a la categoría "Electrónica".</p>
+            <img src="Imagenes/consulta19.png" alt="Consulta 9">
+        </section>
+        
+        <section id="consulta10">
+            <h2>Consulta 10</h2>
+            <pre><code>db.productos.updateOne({ _id: 1 }, { $set: { precio: 35000 } });</code></pre>
+            <p>Descripción: Actualiza el precio del producto numero uno a 35.000.</p>
+            <img src="Imagenes/consulta20.png" alt="Consulta 10">
+        </section>
+        
+
+    </main>
+</body>
+
+</html>
